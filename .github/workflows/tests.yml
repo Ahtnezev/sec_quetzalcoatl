@@ -54,7 +54,7 @@ jobs:
         run: php artisan key:generate
 
       - name: Run Migrations
-        run: pph artisan migrate --force
+        run: php artisan migrate --force
 
       - name: Build Assets
         run: npm run build
