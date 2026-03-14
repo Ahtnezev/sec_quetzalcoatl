@@ -1,0 +1,52 @@
+@use 'config/colors'as *;
+@import 'bootstrap/scss/bootstrap';
+
+[data-theme="light"] {
+    --color-bg: #{$light-background};
+    --color-fg: #{$light-foreground};
+}
+
+[data-theme="dark"] {
+    --color-bg: #{$dark-background};
+    --color-fg: #{$dark-foreground};
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+}
+
+button {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: all var(--global-transition-time) ease-in-out;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: var(--color-fg);
+    background-color: var(--color-bg);
+    border: 0.25rem solid var(--color-fg);
+}
+
+
+// body {
+//     background-color: #212529;
+//     color: #ffffffc6;
+// }
+
+// main {
+//     margin-top: 76px;
+// }
+
+.errors {
+    .__error_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: calc(100vh - 50px);
+    }
+}
