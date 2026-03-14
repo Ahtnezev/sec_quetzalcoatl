@@ -50,6 +50,9 @@ jobs:
       - name: Copy Environment File
         run: cp .env.testing .env
 
+      - name: Inject API Key
+        run: echo "API_KEY_TEST=${{ secrets.API_KEY_TEST }}" >> .env
+
       - name: Generate Application Key
         run: php artisan key:generate --force
 
