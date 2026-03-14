@@ -64,6 +64,11 @@ jobs:
 
       - name: Cache composer
         uses: actions/cache@v4
+        with:
+          path: vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
 
       - name: Run Tests
         run: ./vendor/bin/pest
