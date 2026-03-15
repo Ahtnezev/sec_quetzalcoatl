@@ -1,5 +1,6 @@
 @use 'config/colors'as *;
 @import 'bootstrap/scss/bootstrap';
+@import 'footer';
 
 [data-theme="light"] {
     --color-bg: #{$light-background};
@@ -11,12 +12,18 @@
     --color-fg: #{$dark-foreground};
 }
 
+main {
+    padding-bottom: 80px;
+    flex: 1;
+}
+
 body {
+    padding-top: 76px;
     background-color: var(--color-bg);
     color: var(--color-fg);
-    display: grid;
     min-height: 100vh;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 button {
@@ -30,16 +37,6 @@ button {
     background-color: var(--color-bg);
     border: 0.25rem solid var(--color-fg);
 }
-
-
-// body {
-//     background-color: #212529;
-//     color: #ffffffc6;
-// }
-
-// main {
-//     margin-top: 76px;
-// }
 
 .errors {
     .__error_container {

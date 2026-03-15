@@ -1,0 +1,23 @@
+.footer {
+    .logo {
+        width: 150px;
+    }
+    .list-group {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        .li {
+            .link {
+                outline: none;
+                color: $light; // TODO: check in light theme
+            }
+        }
+    }
+    .wave-container {
+        max-width: 100%;
+        margin: auto;
+    }
+}
